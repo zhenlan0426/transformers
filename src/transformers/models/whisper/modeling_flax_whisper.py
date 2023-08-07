@@ -1182,7 +1182,7 @@ class FlaxWhisperForConditionalGenerationModule(nn.Module):
         )
         self.lm_head = nn.Dense(
             self.config.vocab_size,
-            use_bias=True,
+            use_bias=False,
             dtype=self.dtype,
             kernel_init=jax.nn.initializers.normal(self.config.init_std),
         )
